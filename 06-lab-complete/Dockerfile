@@ -35,6 +35,8 @@ USER agent
 
 ENV PATH=/home/agent/.local/bin:$PATH
 ENV PYTHONPATH=/app
+# Báo cho Python biết "ngăn kéo --user" nằm ở đâu (vì home của agent là /app, không phải /home/agent)
+ENV PYTHONUSERBASE=/home/agent/.local
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
